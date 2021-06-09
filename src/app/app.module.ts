@@ -13,6 +13,7 @@ import {AddGameComponent} from './add-game/add-game.component';
 import {FormsModule} from "@angular/forms";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { EditGameComponent } from './edit-game/edit-game.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RegisterComponent } from './register/register.component';
     GameDetailComponent,
     AddGameComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    EditGameComponent
   ],
   imports: [
     BrowserModule,
