@@ -1,0 +1,17 @@
+<h2> Create new game</h2>
+<form ngForm="form" (ngSubmit)="addGame()">
+  To add a new game please fill in all the fields below:<br/>
+  Title: <input type="text" name="title" required ngModel="game.newGameTitle" style="color:black"/><br/>
+  Price: <input type="number" name="price" required ngModel="game.newGamePrice" style="color:black"/><br/>
+  Year of Publication: <input type="number" name="year" required ngModel="game.newGameYear" style="color:black"/><br/>
+  Rating: <input type="number" name="rating" required ngModel="game.newGameRating" style="color:black"/><br/>
+  Minimum Number of Players: <input type="number" name="minPlayers" required ngModel="game.newGameMinPlayers"
+                                    style="color:black" #minPlayerControl="ngModel"/>
+  <span (show)="minPlayerControl.dirty && minPlayerControl.invalid" style="color:black">Minimum players must be at least 1.</span><br/>
+  Maximum Number of Players: <input type="number" name="maxPlayers" required ngModel="game.newGameMaxPlayers"
+                                    style="color:black"/><br/>
+  Minimum Recommended Player Age: <input type="number" name="minAge" ngModel="game.newGameMinAge" style="color:black"
+                                         required/> <br/>
+  Designer name: <input type="text" name="designer" ngModel="game.newGameDesigner" style="color:black" required/><br/>
+  <button type="submit" class="btn-success">Add Game</button>
+</form>

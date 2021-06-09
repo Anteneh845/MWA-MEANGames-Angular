@@ -1,0 +1,11 @@
+<h1> MEAN Games </h1>
+<ul>
+  <li *ngFor="let game of games">
+    <h4>
+      <a [routerLink]="['/games',game._id]" class="text-decoration-none"> {{game.title}} </a>
+    </h4>
+    <p>
+      {{game.price | currency}}
+    </p>
+  </li>
+</ul>
