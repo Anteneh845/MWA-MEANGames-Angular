@@ -11,6 +11,8 @@ import {HomepageComponent} from './homepage/homepage.component';
 import {GameDetailComponent} from './game-detail/game-detail.component';
 import {AddGameComponent} from './add-game/add-game.component';
 import {FormsModule} from "@angular/forms";
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {FormsModule} from "@angular/forms";
     OrderPipe,
     HomepageComponent,
     GameDetailComponent,
-    AddGameComponent
+    AddGameComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,14 @@ import {FormsModule} from "@angular/forms";
       {
         path: "games",
         component: GameListComponent,
+      },
+      {
+        path: "login",
+        component: LoginComponent,
+      },
+      {
+        path: "register",
+        component: RegisterComponent,
       },
       {
         path: "games/new",
